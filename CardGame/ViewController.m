@@ -31,24 +31,20 @@
     NSLog(@"count %d",self.flipCount);
 }
 
-- (NSString *)getCardTitle{
-    Card *randomCard = nil;
-    randomCard = [self.cardDeck drawRandomCard];
-    return[randomCard content];
-}
-
 - (IBAction)flipCard:(UIButton *)sender {
     if ([sender.currentTitle length]){
         UIImage *cardImage = [UIImage imageNamed:@"CardBack"];
         [sender setBackgroundImage:cardImage forState:UIControlStateNormal];
         [sender setTitle:@"" forState:UIControlStateNormal];
     }
-    else if([self.cardDeck getSize])
-    {
-        UIImage *cardImage = [UIImage imageNamed:@"CardFront"];
-        [sender setBackgroundImage:cardImage forState:UIControlStateNormal];
-        [sender setTitle:self.getCardTitle forState:UIControlStateNormal];
-        self.flipCount++;
+    else{
+        Card * newCard = [self.cardDeck drawRandomCard];
+        if (newCard){
+            UIImage *cardImage = [UIImage imageNamed:@"CardFront"];
+            [sender setBackgroundImage:cardImage forState:UIControlStateNormal];
+            [sender setTitle:newCard.content forState:UIControlStateNormal];
+            self.flipCount++;
+        }
     }
 }
 @end
