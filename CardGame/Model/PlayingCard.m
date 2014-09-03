@@ -14,6 +14,27 @@
     return [rankStrings[self.rank] stringByAppendingString:self.suit];
 }
 
+-(int)match:(NSArray *)otherCards{
+    int score = 0;
+    if ([otherCards count]==1)
+    {
+        PlayingCard* other = [otherCards firstObject];
+        if(other.rank==self.rank){
+            score =4;
+        }else if([other.suit isEqualToString:self.suit]){
+            score =1;
+        }
+//        for (PlayingCard* other in otherCards){
+//            if ([self.suit isEqualToString:other.suit])
+//                score += 1;
+//            else if(self.rank == other.rank){
+//                score += 4;
+//            }
+//        }
+    }
+    return score;
+}
+
 @synthesize suit=_suit;
 -(void)setSuit:(NSString *)suit{
     if([[PlayingCard validSuits] containsObject:suit]){

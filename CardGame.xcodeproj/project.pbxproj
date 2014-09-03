@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF244C3619B52CDA009D14C5 /* PlayingCardGame.m in Sources */ = {isa = PBXBuildFile; fileRef = BF244C3519B52CDA009D14C5 /* PlayingCardGame.m */; };
 		BF28AA0519B44BB600A8EC85 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = BF28AA0419B44BB600A8EC85 /* Card.m */; };
 		BF28AA0819B44F3700A8EC85 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = BF28AA0719B44F3700A8EC85 /* Deck.m */; };
 		BF28AA0B19B452B900A8EC85 /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = BF28AA0A19B452B900A8EC85 /* PlayingCard.m */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF244C3419B52CDA009D14C5 /* PlayingCardGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCardGame.h; sourceTree = "<group>"; };
+		BF244C3519B52CDA009D14C5 /* PlayingCardGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCardGame.m; sourceTree = "<group>"; };
 		BF28AA0319B44BB600A8EC85 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		BF28AA0419B44BB600A8EC85 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		BF28AA0619B44F3700A8EC85 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
@@ -102,6 +105,8 @@
 				BF28AA0A19B452B900A8EC85 /* PlayingCard.m */,
 				BF28AA0C19B4565500A8EC85 /* PlayingCardDeck.h */,
 				BF28AA0D19B4565500A8EC85 /* PlayingCardDeck.m */,
+				BF244C3419B52CDA009D14C5 /* PlayingCardGame.h */,
+				BF244C3519B52CDA009D14C5 /* PlayingCardGame.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				BF28AA0819B44F3700A8EC85 /* Deck.m in Sources */,
 				BFA4B33519B3F6FC005CEC98 /* ViewController.m in Sources */,
 				BFA4B32C19B3F6FC005CEC98 /* AppDelegate.m in Sources */,
+				BF244C3619B52CDA009D14C5 /* PlayingCardGame.m in Sources */,
 				BF28AA0E19B4565500A8EC85 /* PlayingCardDeck.m in Sources */,
 				BFA4B32819B3F6FC005CEC98 /* main.m in Sources */,
 				BF28AA0519B44BB600A8EC85 /* Card.m in Sources */,
