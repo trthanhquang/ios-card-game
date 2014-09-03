@@ -12,11 +12,11 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *flipLable;
-@property (nonatomic, getter = getCardTitle) NSString *cardTitle;
 @property (nonatomic) int flipCount;
 @property (strong, nonatomic) PlayingCardDeck *cardDeck;
 @property (strong, nonatomic) PlayingCardGame *game;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
+@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @end
 
 @implementation ViewController
@@ -38,7 +38,7 @@
 
 - (void)setFlipCount:(int)flipCount{
     _flipCount =flipCount;
-    self.flipLable.text = [NSString stringWithFormat:@"Count %d",self.flipCount];
+    self.flipLable.text = [NSString stringWithFormat:@"Step %d",self.flipCount];
     NSLog(@"count %d",self.flipCount);
 }
 
@@ -47,21 +47,6 @@
     [self.game chooseCardAtIndex:index];
     [self updateUI];
     self.flipCount++;
-    
-//    if ([sender.currentTitle length]){
-//        UIImage *cardImage = [UIImage imageNamed:@"CardBack"];
-//        [sender setBackgroundImage:cardImage forState:UIControlStateNormal];
-//        [sender setTitle:@"" forState:UIControlStateNormal];
-//    }
-//    else{
-//        Card * newCard = [self.cardDeck drawRandomCard];
-//        if (newCard){
-//            UIImage *cardImage = [UIImage imageNamed:@"CardFront"];
-//            [sender setBackgroundImage:cardImage forState:UIControlStateNormal];
-//            [sender setTitle:newCard.content forState:UIControlStateNormal];
-//            self.flipCount++;
-//        }
-//    }
 }
 
 - (void) updateUI{
@@ -73,6 +58,7 @@
         [cardButton setBackgroundImage:[self backgroundImageForCard:card]
                               forState:UIControlStateNormal];
         cardButton.enabled = !card.isMatched;
+        self.scoreLabel.text = [NSString stringWithFormat:@"Score :%ld",self.game.score];
     }
 }
 
